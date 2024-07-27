@@ -18,10 +18,11 @@ Our solution, as outlined in the proposal, follows the main steps of:
 Hamiltonian was created for molecules and encoded into the qubits using JORDAN-WIGNER transformation.
 
 VQE(Varaitional Quantum Eigensolver) is a hybrid algorithm based on Variational Quantum Principle that uses both classical computers and quantum computers to find the ground state of a given physical system.
-To design the ansatz, we use the PennyLane library function qml.UCCSD
-This runs through all the possible excitations assigning them weights (here, theta) and runs the unitary operator to control the excitations of them all.
-Next we use the PennyLane in-built gradient-descent optimiser to optimise the energy.
 
+To design the ansatz, we use the PennyLane library function qml.UCCSD
+The UCCSD ansatz calls the SingleExcitation() and DoubleExcitation() templates to exponentiate the coupled-cluster excitation operator. UCCSD is a VQE ansatz commonly used to run quantum chemistry simulations.This runs through all the possible excitations assigning them weights (here, theta) and runs the unitary operator to control the excitations of them all.
+
+Next we use the PennyLane in-built gradient-descent optimiser to optimise the energy.
 Note: The descent optimiser is used due to the existence of the Variational Quantum Principle. This states that the ground-state energy of a state can never be less than the expectation value of the Hamiltonian.
 Given a parametrized ansatz for the ground state eigenstate, with parameters that can be optimized classically using gradient descent method to find the energy closest to FCI energy.
 However, the Hamilotnian must be of a suitable initial state, hence, the ansatz must be taken precisely.
@@ -62,7 +63,7 @@ CODE OVERVIEW :
 
    -Default qubit simulator is used when number of qubits required for simulation are less.
    
-   -Lightning qubit simulator is used when number of qubits required for simulation are more.
+   -Lightning qubit simulator is used to perform fast linear algebra calculations for simulating quantum state-vector evolution..
    
 10)Defined the quantum node (qnode) for the UCCSD circuit.
 
