@@ -24,9 +24,9 @@ However, the Hamilotnian must be of a suitable initial state, hence, the ansatz 
 
 PYTHON language has been used for the simulation of quantum circuit and optimization of parameters.
 The libraries used are :
-1) Pennylane
-2) Numpy
-3) Openfermion
+1) Pennylane (Python library for quantum computing, quantum machine learning, and quantum chemistry)
+2) Numpy (Library adding support for large, multi-dimensional arrays and matrices, along with a large collection of functions to operate on these arrays)
+3) Openfermion (Open source library for compiling and analyzing quantum algorithms which simulate fermionic systems)
 
 For O2 : ![Screenshot from 2024-07-27 21-28-09](https://github.com/user-attachments/assets/b19dc122-4a21-490a-b84c-2a3a80501469)
 For H2 : ![Screenshot from 2024-07-27 21-32-31](https://github.com/user-attachments/assets/37f7192b-668e-40bf-9c2b-7c3ead13f166)
