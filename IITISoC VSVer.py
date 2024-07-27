@@ -54,7 +54,7 @@ s_wires, d_wires = qml.qchem.excitations_to_wires(singles, doubles)
 # Define the device
 dev = qml.device("default.qubit", wires=qubits)
 
-# Define the qnode
+# Define the qnode and ansatz
 @qml.qnode(dev)
 def circuit(params, wires, s_wires, d_wires, hf_state):
     qml.UCCSD(params, wires, s_wires, d_wires, hf_state)
@@ -128,7 +128,7 @@ s_wires, d_wires = qml.qchem.excitations_to_wires(singles, doubles)
 # Define the device
 dev = qml.device("lightning.qubit", wires=qubits)
 
-# Define the qnode
+# Define the qnode and ansatz
 @qml.qnode(dev)
 def circuit(params, wires, s_wires, d_wires, hf_state):
     qml.UCCSD(params, wires, s_wires, d_wires, hf_state)
@@ -202,7 +202,7 @@ s_wires, d_wires = qml.qchem.excitations_to_wires(singles, doubles)
 # Define the device
 dev = qml.device("default.qubit", wires=qubits)
 
-# Define the qnode
+# Define the qnode and ansatz
 @qml.qnode(dev)
 def circuit(params, wires, s_wires, d_wires, hf_state):
     qml.UCCSD(params, wires, s_wires, d_wires, hf_state)
