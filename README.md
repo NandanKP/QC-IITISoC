@@ -15,11 +15,15 @@ Our solution, as outlined in the proposal, follows the main steps of:
 2) Design an ansatz
 3) Optimise the energy
 
+Hamiltonian was created for molecules and encoded into the qubits using JORDAN-WIGNER transformation.
+
+VQE(Varaitional Quantum Eigensolver) is a hybrid algorithm based on Variational Quantum Principle that uses both classical computers and quantum computers to find the ground state of a given physical system.
 To design the ansatz, we use the PennyLane library function qml.UCCSD
 This runs through all the possible excitations assigning them weights (here, theta) and runs the unitary operator to control the excitations of them all.
 Next we use the PennyLane in-built gradient-descent optimiser to optimise the energy.
 
 Note: The descent optimiser is used due to the existence of the Variational Quantum Principle. This states that the ground-state energy of a state can never be less than the expectation value of the Hamiltonian.
+Given a parametrized ansatz for the ground state eigenstate, with parameters that can be optimized classically using gradient descent method to find the energy closest to FCI energy.
 However, the Hamilotnian must be of a suitable initial state, hence, the ansatz must be taken precisely.
 
 PYTHON language has been used for the simulation of quantum circuit and optimization of parameters.
