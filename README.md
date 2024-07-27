@@ -80,7 +80,7 @@ CODE OVERVIEW :
    
    -Every second step, the current step number and energy are printed.
 
-Here are the energy outputs recieved after simulations : 
+Here are the energy outputs recieved after simulation : 
 
 For O2 : ![Screenshot from 2024-07-27 21-28-09](https://github.com/user-attachments/assets/b19dc122-4a21-490a-b84c-2a3a80501469)
 For H2 : ![Screenshot from 2024-07-27 21-32-31](https://github.com/user-attachments/assets/37f7192b-668e-40bf-9c2b-7c3ead13f166)
