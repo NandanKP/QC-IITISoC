@@ -154,8 +154,6 @@ import pennylane as qml
 from pennylane import numpy as np
 
 symbols = ["H", "O", "H"]
-#coordinates = np.array([[-0.0399, -0.0038, 0.0], [1.5780, 0.8540, 0.0], [2.7909, -0.5159, 0.0]])
-#coordinates = np.array([[ 0.000000 ,   0.757000 ,   0.586000], [0.000000 ,   0.000000 ,   0.000000], [ 0.000000 ,   -0.757000 ,   0.586000]])
 coordinates = np.array([
 
 [1.1103, 1.4235, 0.0], # Hydrogen atom 1
