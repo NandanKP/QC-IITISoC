@@ -22,6 +22,12 @@ Next we use the PennyLane in-built gradient-descent optimiser to optimise the en
 Note: The descent optimiser is used due to the existence of the Variational Quantum Principle. This states that the ground-state energy of a state can never be less than the expectation value of the Hamiltonian.
 However, the Hamilotnian must be of a suitable initial state, hence, the ansatz must be taken precisely.
 
+PYTHON language has been used for the simulation of quantum circuit and optimization of parameters.
+The libraries used are :
+1) Pennylane
+2) Numpy
+3) Openfermion
+
 For O2 : ![Screenshot from 2024-07-27 21-28-09](https://github.com/user-attachments/assets/b19dc122-4a21-490a-b84c-2a3a80501469)
 For H2 : ![Screenshot from 2024-07-27 21-32-31](https://github.com/user-attachments/assets/37f7192b-668e-40bf-9c2b-7c3ead13f166)
 For H2O : ![Screenshot from 2024-07-27 21-33-24](https://github.com/user-attachments/assets/5d7672db-ebb5-4bec-b444-f12c3fa5d305)
