@@ -28,6 +28,32 @@ The libraries used are :
 2) Numpy (Library adding support for large, multi-dimensional arrays and matrices, along with a large collection of functions to operate on these arrays)
 3) Openfermion (Open source library for compiling and analyzing quantum algorithms which simulate fermionic systems)
 
+CODE OVERVIEW :
+*First we have imported neccessary libraries like pennylane, numpy, openfermion.
+*Defined molecular structure of molecules : symbols and coordinates(3D).
+*Added some additional properties : charge, spin multiplicity, basis set.
+*Created a 'Molecule' object using the previously defined parameters. This object will store all necessary information about that respective molecule.
+*Defined the number of active electrons and orbitals for the simulation.
+   -active electrons specifies the number of electrons considered in the active space. 
+   -active orbitals specifies the number of orbitals considered.
+*Compute the Hamiltonian of the molecule and determine the number of qubits required for the simulation.
+   -Hamiltonian operator representing the energy of the system.
+   -Qubits mentioned in code are the number of qubits needed to represent the molecular system on a quantum computer.
+*Generated the Hartree-Fock state, which is the initial approximation of the ground state wavefunction.
+*After that we have generated single and double excitations from the Hartree-Fock state.
+*Define the quantum device (simulator) to be used for the simulation.
+   -Default qubit simulator is used when number of qubits required for simulation are less.
+   -Lightning qubit simulator is used when number of qubits required for simulation are more.
+*Defined the quantum node (qnode) for the UCCSD circuit.
+   -The 'circuit' function applies the UCCSD ansatz to the Hartree-Fock state. 
+   -The function returns the expectation value of the Hamiltonian (H).
+*Initialized the circuit parameters used in UCCSD ansatz to zero.The number of parameters is equal to the total number of single and double excitations.
+*Defined the optimizer to be used for parameter optimization. Here, the gradient descent optimizer with a stepsize of 0.5 is chosen.
+*Optimize the circuit parameters over 21 iterations:
+   -In each iteration, the optimizer updates the parameters and computes the energy.
+   -Every second step, the current step number and energy are printed.
+
+Here are the energy outputs recieved after simulations : 
 For O2 : ![Screenshot from 2024-07-27 21-28-09](https://github.com/user-attachments/assets/b19dc122-4a21-490a-b84c-2a3a80501469)
 For H2 : ![Screenshot from 2024-07-27 21-32-31](https://github.com/user-attachments/assets/37f7192b-668e-40bf-9c2b-7c3ead13f166)
 For H2O : ![Screenshot from 2024-07-27 21-33-24](https://github.com/user-attachments/assets/5d7672db-ebb5-4bec-b444-f12c3fa5d305)
