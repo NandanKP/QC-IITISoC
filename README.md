@@ -46,7 +46,7 @@ CODE OVERVIEW :
    
 6)Compute the Hamiltonian of the molecule and determine the number of qubits required for the simulation.
 
-   -Hamiltonian operator representing the energy of the system.
+    -Hamiltonian operator representing the energy of the system.
    
    -Qubits mentioned in code are the number of qubits needed to represent the molecular system on a quantum computer.
    
