@@ -30,9 +30,13 @@ The libraries used are :
 
 CODE OVERVIEW :
 1.First we have imported neccessary libraries like pennylane, numpy, openfermion.
+
 2.Defined molecular structure of molecules : symbols and coordinates(3D).
+
 3.Added some additional properties : charge, spin multiplicity, basis set.
+
 4.Created a 'Molecule' object using the previously defined parameters. This object will store all necessary information about that respective molecule.
+
 5.Defined the number of active electrons and orbitals for the simulation.
    -active electrons specifies the number of electrons considered in the active space. 
    -active orbitals specifies the number of orbitals considered.
