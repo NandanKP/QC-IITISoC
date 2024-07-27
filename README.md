@@ -29,27 +29,27 @@ The libraries used are :
 3) Openfermion (Open source library for compiling and analyzing quantum algorithms which simulate fermionic systems)
 
 CODE OVERVIEW :
-*First we have imported neccessary libraries like pennylane, numpy, openfermion.
-*Defined molecular structure of molecules : symbols and coordinates(3D).
-*Added some additional properties : charge, spin multiplicity, basis set.
-*Created a 'Molecule' object using the previously defined parameters. This object will store all necessary information about that respective molecule.
-*Defined the number of active electrons and orbitals for the simulation.
+1.First we have imported neccessary libraries like pennylane, numpy, openfermion.
+2.Defined molecular structure of molecules : symbols and coordinates(3D).
+3.Added some additional properties : charge, spin multiplicity, basis set.
+4.Created a 'Molecule' object using the previously defined parameters. This object will store all necessary information about that respective molecule.
+5.Defined the number of active electrons and orbitals for the simulation.
    -active electrons specifies the number of electrons considered in the active space. 
    -active orbitals specifies the number of orbitals considered.
-*Compute the Hamiltonian of the molecule and determine the number of qubits required for the simulation.
+6.Compute the Hamiltonian of the molecule and determine the number of qubits required for the simulation.
    -Hamiltonian operator representing the energy of the system.
    -Qubits mentioned in code are the number of qubits needed to represent the molecular system on a quantum computer.
-*Generated the Hartree-Fock state, which is the initial approximation of the ground state wavefunction.
-*After that we have generated single and double excitations from the Hartree-Fock state.
-*Define the quantum device (simulator) to be used for the simulation.
+7.Generated the Hartree-Fock state, which is the initial approximation of the ground state wavefunction.
+8.After that we have generated single and double excitations from the Hartree-Fock state.
+9.Define the quantum device (simulator) to be used for the simulation.
    -Default qubit simulator is used when number of qubits required for simulation are less.
    -Lightning qubit simulator is used when number of qubits required for simulation are more.
-*Defined the quantum node (qnode) for the UCCSD circuit.
+10.Defined the quantum node (qnode) for the UCCSD circuit.
    -The 'circuit' function applies the UCCSD ansatz to the Hartree-Fock state. 
    -The function returns the expectation value of the Hamiltonian (H).
-*Initialized the circuit parameters used in UCCSD ansatz to zero.The number of parameters is equal to the total number of single and double excitations.
-*Defined the optimizer to be used for parameter optimization. Here, the gradient descent optimizer with a stepsize of 0.5 is chosen.
-*Optimize the circuit parameters over 21 iterations:
+11.Initialized the circuit parameters used in UCCSD ansatz to zero.The number of parameters is equal to the total number of single and double excitations.
+12.Defined the optimizer to be used for parameter optimization. Here, the gradient descent optimizer with a stepsize of 0.5 is chosen.
+13.Optimize the circuit parameters over 21 iterations:
    -In each iteration, the optimizer updates the parameters and computes the energy.
    -Every second step, the current step number and energy are printed.
 
